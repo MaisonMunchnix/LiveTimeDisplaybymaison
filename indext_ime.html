@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What time is it?</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <video autoplay muted loop>
+      <source src="nightsky.mp4" type="video/mp4" />
+    </video>
+
+    <div class="container">
+      <h1 id="current-time">12:00:00</h1>
+      <div class="reminder">
+        <p>Romans 5:8</p>
+        <!-- <p>ALWAYS REMEMBER</p> -->
+        <h2>
+          But God demonstrates His love toward us, in that while we were still
+          sinners, Christ died for us.
+          <!-- By getting out of bed, you're already starting to experience -->
+          <!-- <em>The</em> win. -->
+        </h2>
+      </div>
+    </div>
+
+    <script>
+      let time = document.getElementById("current-time");
+
+      setInterval(() => {
+        let d = new Date();
+        time.innerHTML = d.toLocaleTimeString();
+      }, 1000);
+    </script>
+  </body>
+</html>
